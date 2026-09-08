@@ -1,0 +1,90 @@
+:root {
+    --color-fondo: #131a22;
+    --color-panel: #afe0ba;
+    --color-resumen: #d9efde;
+    --color-texto: #15191b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    
+    min-height: 100vh;
+    background-color: #303033;
+    background-image:
+        linear-gradient(rgba(35, 35, 38, 0.55), rgba(35, 35, 38, 0.55)),
+        url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+}
+
+.cotizador {
+    background-color: var(--color-panel);
+}
+
+.resumen {
+    min-height: 100%;
+    background-color: var(--color-resumen);
+}
+
+.titulo-principal {
+    font-family: "Patrick Hand", "Comic Sans MS", cursive;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.fila-resumen {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(63, 63, 70, 0.22);
+}
+
+.fila-resumen dt {
+    color: #3f3f46;
+}
+
+.fila-resumen dd {
+    margin: 0;
+    color: #18181b;
+    font-weight: 500;
+    text-align: right;
+}
+
+.fila-total dt,
+.fila-total dd {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.estado-correcto {
+    color: #14532d;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.estado-correcto::before {
+    width: 0.65rem;
+    height: 0.65rem;
+    margin-right: 0.6rem;
+    border-radius: 9999px;
+    background-color: #166534;
+    content: "";
+}
+
+@media (max-width: 640px) {
+    .fila-resumen {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .fila-resumen dd {
+        text-align: left;
+    }
+}
